@@ -1,0 +1,734 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+#notification {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #151313be;
+    z-index: 200;
+    
+}
+
+.notl {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: #fff;
+    border: 1px solid#ddd;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    color: black;
+}
+
+.notl > h3{
+    color: black;
+}
+
+#ok-button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+:root {
+    --background-1:rgba(203, 200, 196, 0.541);
+    --background-2:rgba(122, 123, 124, 0.657);
+    --text-color-1: #fff;
+    --text-color-2: #cfcfcf;
+    --movcard-hover2: linear-gradient(0deg, rgba(0,0,0,0.8904152237066701) 14%, rgba(0,0,0,0.8343928147430848) 65%, rgba(0,0,0,0.7671659239867822) 100%);
+    --movcard-hover: linear-gradient(0deg, rgba(34,34,36,0.9296309099811799) 14%, rgba(53,53,56,0.8511995374321604) 57%, rgba(85,86,86,0.8147849716058299) 100%);;
+}
+
+body {
+    background:url('images/bg/Stela_Ecru_CutVelvet_Upholstery_TopFabric.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.main-container {
+    backdrop-filter: blur(5px);
+    background-color: rgba(122, 123, 124, 0.657);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    height: 12vh;
+    /* background-color: rgb(240, 133, 125); */
+    backdrop-filter: blur(5px);
+    background-color: var(--background-2);
+    position: fixed;
+    /* position: sticky; */
+    font-size: 20px;
+    padding: 0px 30px;
+    z-index: 100;
+}
+
+.search {
+    width: 20%;
+    height: 55px;
+    position: relative;
+    align-items: center;
+}
+.search > i {
+    position: absolute;
+    left: 0;
+    /* top: 20%; */
+    transform: translateY(50%);
+    margin-left: 20px;
+    font-size: 30px;
+    color: var(--text-color-1);
+}
+.search input {
+    /* width: 20%; */
+    height: 100%;
+    border-radius: 50px;
+    padding: 10px 50px 10px 70px;
+    background-color: var(--background-1);
+    color: var(--text-color-1);
+    outline: none;
+    border: none;
+    text-align: center;
+
+}
+
+.search input::placeholder {
+    color: var(--text-color-1);
+    font-size: 20px;
+    text-align: center;
+}
+
+.header .pmov {
+    padding: 13px 20px;
+    background-color: var(--background-1);
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.tittles {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    color: var(--text-color-1);
+}
+
+.tittles p {
+    cursor: pointer;
+}
+
+/* BELL NOTIFICATION BELL */
+
+.bell i {
+    font-size: 28px;
+    color: var(--text-color-1);
+    background-color: var(--background-1);
+
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.bell {
+    position: relative;
+    cursor: pointer;
+}
+
+
+
+.circle i {
+    position: absolute;
+    color: greenyellow;
+    font-size: 12px;
+    padding: 0;
+    right: 0;
+    top: 0;
+}
+
+.profile {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color: var(--background-1);
+
+    border-radius: 50px;
+    padding: 7px;
+}
+
+.name h5 {
+    font-size: 16px;
+    color: var(--text-color-1);
+}
+
+.name p {
+    font-size: 14px;
+    color: var(--text-color-2);
+
+}
+
+.profile i {
+    font-size: 40px;
+    color: var(--text-color-1);
+    cursor: pointer;
+}
+
+.profile .down {
+    font-size: 24px;
+    margin-left: 50px;
+    color: var(--text-color-1);
+}
+
+.body {
+    display: flex;
+    /* position: relative; */
+    /* border: 50px solid rgba(0, 128, 0, 0.616); */
+    border-radius: 50px;
+    /* padding: 20px; */
+    /* background-color: rgba(138, 138, 138, 0.745); */
+    /* backdrop-filter: blur(12px); */
+    /* padding-left: 40px; */
+}
+
+.sec {
+    width: 100%;
+    height: 20vh;
+    /* background-color: rgb(255, 127, 204); */
+}
+
+aside {
+    width: 20%;
+    /* height: 100%; */
+    height: 80vh;
+    /* background-color: rgba(127, 255, 212, 0.923); */
+    position: fixed;
+    /* position: static; */
+    /* position: sticky; */
+    /* position: relative; */
+    /* bottom: 20; */
+    top: 120px;
+    left: 0;
+    border-radius: 50px 0px 0px 50px;
+    margin-left: 30px;
+    z-index: 100;
+}
+
+.aside-continer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.aside-continer .box {
+    
+    width: 100%;
+    height: 50vh;
+    border-radius: 25px;
+    background-color: rgba(203, 200, 196, 0.541);
+    padding: 20px;
+    /* position: relative; */
+    overflow-y: scroll;
+    scrollbar-width: none;
+    overflow-x: hidden;
+    align-content: center;
+}
+
+                            /* SIDEBAR SORT */
+
+.titandsort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.titandsort h3 {
+    color: var(--text-color-1);
+    margin-bottom: 10px;
+}
+
+.titandsort h3 > .hot {
+    color: rgb(216, 120, 65);
+    -webkit-text-stroke: .3px red ;
+    margin-right: 7px;
+}
+
+.titandsort p {
+    display: flex;
+    align-items: center;
+    color: var(--text-color-1);
+}
+
+.titandsort > span {
+    color: var(--text-color-2);
+}
+
+.titandsort p > i {
+    font-size: 20px;
+    color: var(--text-color-2);
+}
+
+
+
+
+
+/* SIDEBAR MOVEIS */
+
+.mov1 {
+    width: 100%;
+    background-image: url(images/sidebar1/Day\ off\ \ Action\ Movie\ Worldwide\ Premiere\ 2024.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 170px;
+    margin: 9px;
+    background-color: rgb(127, 197, 255);
+    margin: 10px auto;
+    border-radius: 20px;
+    align-content: flex-end;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.caps {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(0deg, rgba(34,34,36,0.8932163441548494) 0%, rgba(53,53,56,0.7615636830904237) 45%, rgba(110,113,115,0.7251491172640931) 100%);
+}
+.caps h4 {
+    color: var(--text-color-1);
+}
+
+.caps >i {
+    font-size: 20px;
+    color: var(--text-color-1);
+    padding: 7px;
+    border-radius: 25px;
+    background-color: var(--background-2);
+    display: block;
+    cursor: pointer;
+}
+
+.mov1:nth-child(2){
+    background-image: url(images/sidebar1/Bad\ Boys\ 5\ \(2025\)\ Full\ Movie\ Facts\ \ Will\ Smith\,\ Martin\ Lawrence\,\ Rhea\ Seehorn.jpg);
+}
+
+.mov1:nth-child(4){
+    background-image: url(images/sidebar1/Best\ EXPLOSIVE\ ACTION\ Movies\ of\ 2024\ so\ far!.jpg);
+}
+.mov1:nth-child(5){
+    background-image: url(images/sidebar1/hq720.jpg);
+}
+.mov1:nth-child(6) {
+    background-image: url(images/sidebar1/deadpool.jpeg);
+}
+
+
+
+                /* CONTINUE WATCHING SECTION */
+.aside-continer .box1 {
+    
+    width: 100%;
+    height: 30vh;
+    border-radius: 25px;
+    background-color: var(--background-1);
+    padding: 20px;
+    /* position: relative; */
+    overflow-y: scroll;
+    scrollbar-width: none;
+    overflow-x: hidden;
+    align-content: center;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.box1 >h4{
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--text-color-1);
+}
+
+
+.mb2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mb2 img {
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mb2 > h4 {
+    font-size: 17px;
+    color: var(--text-color-1);
+}
+
+.mb2 > h4 > span {
+    font-size: 14px;
+    color: var(--text-color-2);
+}
+
+.mb2 > i {
+    font-size: 24px;
+    color: var(--text-color-1);
+    background-color: var(--background-1);
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+main {
+    width: 100%;
+    /* background-color: aquamarine; */
+    border-radius: 0px 50px 50px 0px;
+    padding-top: 100px;
+    display: flex;
+    justify-content: end;
+    align-content: end;
+}
+
+/*  CONTAINER FOR THE MAIN SECTIONS ( ) */
+
+.container {
+    display: flex;
+    width: 80%;
+    /* background-color: rgb(128, 110, 219); */
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+
+.container .hero {
+    background-image: url(images/mainh.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    width: 100%;
+    height: 460px;
+    /* This PAdding affects the Movie  Cards */
+    margin: 0px 30px 30px 30px;
+    /* position: fixed; */
+    padding: 30px;
+}
+
+.hero-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+    /* background-color: aqua; */
+}
+
+.status {
+    display: flex;
+}
+
+.status p > .hot {
+    color: rgb(216, 120, 65);
+    -webkit-text-stroke: .3px red ;
+    margin-right: 7px;
+} 
+
+.status > p{
+    padding: 8px 12px;
+    background-color: var(--background-2);
+    color: var(--text-color-1);
+    cursor: pointer;
+    border-radius: 50px;
+    /* display: inline; */
+    display: inline-flex;
+    align-items: center;
+
+}
+
+.tag {
+    display: flex;
+    gap: 10px;
+}
+
+.hcontent .tag p {
+    padding: 10px 12px;
+    background-color: var(--background-2);
+    border-radius: 50px;
+    color: var(--text-color-1);
+}
+
+.hcontent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.hcontent > p,h3 {
+    color: var(--text-color-1);
+}
+
+.hcontent > h3 {
+    font-size: 34px;
+}
+
+.hcontent > p{
+    font-size: 18px;
+}
+
+.hbtns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hbtns p {
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 550;
+    cursor: pointer;
+}
+.hbtns p:nth-child(2){
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: var(--text-color-1);
+}
+.hbtns p:nth-child(2) > i{
+    
+}
+
+.hbtns .dots{
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: var(--text-color-1);
+    cursor: pointer;
+}
+
+
+
+.hbtns p > i {
+    font-size: 34px;
+    margin-right: 10px;
+}
+
+.hcta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.hcta > i {
+    padding: 17px;
+    background-color: #eadfdf;
+    border-radius: 50px;
+    font-size: 24px;
+}
+
+.arrows i {
+    padding: 15px;
+    background-color: var(--background-2);
+    color: var(--text-color-1);
+    border-radius: 50px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+                    /* MOVIE CARD SECTION */
+
+.moviecont {
+    /* overflow-x: scroll;
+    scrollbar-width: none;
+    overflow-y: hidden; */
+    overflow: hidden;
+}   
+
+.top-tittles {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    align-items: center;
+}
+
+.top-tittles h3 {
+
+}
+.top-tittles p {
+    padding: 10px 12px;
+    background-color: var(--background-2);
+    color: var(--text-color-1);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.movies {
+    /* width: 100%; */
+    display: flex;
+    /* flex-direction: row; */
+    gap: 20px;
+    /* scrollbar-width: none; */
+    overflow-x: scroll;
+    scrollbar-width: none;
+    /* overflow-y: hidden; */
+    /* background-color: rgb(132, 132, 229); */
+    /* padding: 0px 20px 30px 20px; */
+    margin: 0px 30px 30px 30px;
+    
+}
+
+/* MOVIE SLIDE */
+
+.movies > .movcard {
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/movcard/disneys-young-woman-and-the-sea-2024-makes-a-playful-twist-v0-ceoe6z4pktdd1.webp);
+    border-radius: 25px;
+    min-width: 200px;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    justify-content: flex-start;
+}
+
+.mbg{
+    width: 100%;
+    height: 100%;
+    display: none;
+    transition: 2s;
+    /* display: flex; */
+    align-content: space-between;
+    flex-direction: column;
+    background: linear-gradient(0deg, rgba(0,0,0,0.8904152237066701) 14%, rgba(0,0,0,0.8343928147430848) 65%, rgba(0,0,0,0.7671659239867822) 100%);
+    /* z-index: -1; */
+}
+
+.movcard:hover .mbg{
+    display: flex;
+    transition: 2s;
+}
+
+.movcard:nth-child(2){
+    background-image: url(images/movcard2/The-Matrix-Vintage-Movie-Poster-Original-1-Sheet-27x41_368x.webp);
+}
+
+.movcard:nth-child(3){
+    background-image: url(images/movcard/img_2865_6.webp);
+}
+.movcard:nth-child(4){
+    background-image: url(images/movcard/MV5BMzhkMjFkN2YtODU2Ni00YWYwLWExN2MtOWNjZmQxM2U4YTM5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg);
+}
+.movcard:nth-child(5){
+    background-image: url(images/movcard/MV5BODIxY2NkYWEtNWE3ZS00NDZhLWFlMDktMTE0NDNlZDk0MzAyXkEyXkFqcGc@._V1_.jpg);
+}
+.movcard:nth-child(6){
+    background-image: url(images/movcard/sub-buzz-5113-1726065721-1.webp);
+}
+.movcard:nth-child(6){
+    background-image: url(images/movcard/SOKNNNH5LJA3PMGNWBOIMLGUHM.avif);
+}
+.movcard:nth-child(7){
+    background-image: url(images/movcard2/Joker-One-Sheet-Movie-Poster-10.jpg);
+}
+
+.movcard:nth-child(8){
+    background-image: url(images/movcard2/hypnotic-movie-poster-2023-1000782336.jpg);
+}
+.movcard:nth-child(9){
+    background-image: url(images/movcard2/Harry\ Potter.jpg);
+}
+.movcard:nth-child(10){
+    background-image: url(images/movcard2/Dora_The_Explorer_And_The_Lost_City_Of_Gold_-_Hollywood_Dora\ \(The\ Explorer\ \)\ And\ The\ Lost\ City\ Of\ Gold\ -\ Hollywood\ English\ Movie\ Poster\ -\ Framed\ Prints\ by.jpg);
+}
+
+
+.m2:nth-child(1){
+    background-image: url(images/movcard2/vertical_26ebef9d-31d4-4c04-8397-1bddfcbc86b1.jpg);
+}
+.m2:nth-child(2){
+    background-image: url(images/movcard2/0bb12cbdf3673531c6d1d4c5a0a11853.jpg);
+}
+.m2:nth-child(3){
+    background-image: url(images/movcard2/movies-poster-26.jpg);
+}
+.m2:nth-child(4){
+    background-image: url(images/movcard2/movies-poster-20.jpg);
+}
+.m2:nth-child(5){
+    background-image: url(images/movcard2/movies-poster-21.jpg);
+}
+.m2:nth-child(6){
+    background-image: url(images/movcard2/A2_Poster_DC_v80_PAYOFF_221029_12trimHD.jpg);
+}
+.m2:nth-child(7){
+    background-image: url(images/movcard2/movies-poster-5.jpg);
+}
+.m2:nth-child(8){
+    background-image: url(images/movcard2/Movies\ at\ AMC\ \ View\ Showtimes\ Trailers\ &\ Get\ Tickets\ to\ Movies\ Near\ You.jpg);
+}
+.m2:nth-child(9){
+    background-image: url(images/movcard2/Best\ Movies\ of\ 2021\ –\ THE\ SPECTATOR.jpeg);
+}
+.m2:nth-child(10){
+    background-image: url(images/movcard2/Vue\ Browse\ Latest\ Movie\ Releases.webp);
+}
+
+
+.mbg >i {
+    /* display: none; */
+    display: flex;
+    height: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 56px;
+    transition: 7s;
+    color: var(--text-color-1);
+    background-color: var(--movcard-hover2)
+    
+}
+
+.mbg >p{
+    color: var(--text-color-1);
+    font-size: 26px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+footer {
+    height: 30px;
+    width: 100%;
+    background-color: rgb(64, 64, 64);
+    color: var(--text-color-1);
+    text-align: center;
+    align-content: center;
+}
+
+footer a {
+    color: aqua;
+}
